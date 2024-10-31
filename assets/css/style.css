@@ -1,20 +1,3 @@
-/*----------------------------------------------
-*
-* [Main Stylesheet]
-*
-* Theme    : Brilio
-* Version  : 1.0
-* Author   : Themeland
-* Support  : hridoy1272@gmail.com
-* 
-----------------------------------------------*/
-/*----------------------------------------------
-*
-* [Font Import]
-*
-* Urbanist    : https://fonts.google.com
-*
-----------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0");
 /*----------------------------------------------
@@ -989,7 +972,7 @@ header .navbar-expand .navbar-nav .nav-item .nav-link {
   position: relative;
   padding-right: 1rem;
   padding-left: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--top-nav-item-color);
 }
 header .navbar-expand .navbar-nav .nav-item .nav-link::after {
@@ -1782,6 +1765,10 @@ header .navbar-expand .dropdown:hover > .dropdown-menu {
 }
 .bg-content::after {
   left: 0;
+}
+
+.service-wrapper{
+  row-gap: 1.5rem;
 }
 
 .services .item .service-content {
@@ -2629,6 +2616,13 @@ header .navbar-expand .dropdown:hover > .dropdown-menu {
 .sticky .intro {
   position: sticky;
   top: 130px;
+}
+
+.clickable-item {
+  text-decoration: none;
+  color: inherit; /* Inherit color from parent */
+  display: flex; /* Make the link cover entire content */
+  align-items: center;
 }
 
 .awards .list-group-item {
