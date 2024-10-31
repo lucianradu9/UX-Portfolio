@@ -2,7 +2,7 @@
 *
 * [Main Scripts]
 *
-* Theme    : Brilio
+* Theme    : Radu Lucian
 * Version  : 1.0
 * Author   : Themeland
 * Support  : hridoy1272@gmail.com

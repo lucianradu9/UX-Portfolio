@@ -2447,7 +2447,7 @@ header .navbar-expand .dropdown:hover > .dropdown-menu {
   align-items: baseline;
 }
 .text-marquee .marquee-text.text-original {
-  animation: brilio-normal-text-marquee 20s linear infinite;
+  animation: Radu Lucian-normal-text-marquee 20s linear infinite;
 }
 .text-marquee .marquee-text.text-copy {
   position: absolute;
@@ -2456,7 +2456,7 @@ header .navbar-expand .dropdown:hover > .dropdown-menu {
   will-change: transform;
   backface-visibility: hidden;
   transform: translateX(100%) translateZ(0);
-  animation: brilio-normal-text-marquee-copy 20s linear infinite;
+  animation: Radu Lucian-normal-text-marquee-copy 20s linear infinite;
 }
 .text-marquee .marquee-text-item {
   font-size: 100px;
@@ -2479,7 +2479,7 @@ header .navbar-expand .dropdown:hover > .dropdown-menu {
   color: #f778ba;
 }
 
-@keyframes brilio-normal-text-marquee {
+@keyframes Radu Lucian-normal-text-marquee {
   0% {
     transform: translateX(0) translateZ(0);
   }
@@ -2487,7 +2487,7 @@ header .navbar-expand .dropdown:hover > .dropdown-menu {
     transform: translateX(-100%) translateZ(0);
   }
 }
-@keyframes brilio-normal-text-marquee-copy {
+@keyframes Radu Lucian-normal-text-marquee-copy {
   0% {
     transform: translateX(100%) translateZ(0);
   }
@@ -3166,10 +3166,10 @@ footer .smooth-anchor:hover::after {
 .odd .awards .logo img {
   filter: invert(1);
 }
-.odd #brilio-accordion .accordion-item {
+.odd #Radu Lucian-accordion .accordion-item {
   color: var(--secondary-p-color);
 }
-.odd #brilio-accordion .accordion-item .accordion-button {
+.odd #Radu Lucian-accordion .accordion-item .accordion-button {
   background-color: var(--secondary-bg-color-2);
   color: var(--white-color);
 }
@@ -3441,18 +3441,18 @@ span.page-numbers:hover:not(.current) {
     transform: translateX(0);
   }
 }
-#brilio-accordion .accordion-item {
+#Radu Lucian-accordion .accordion-item {
   background-color: transparent;
   border: none;
   color: var(--primary-p-color);
 }
-#brilio-accordion .accordion-item:not(:last-child) {
+#Radu Lucian-accordion .accordion-item:not(:last-child) {
   margin-bottom: 0.5rem;
 }
-#brilio-accordion .accordion-item .accordion-header {
+#Radu Lucian-accordion .accordion-item .accordion-header {
   margin: 0;
 }
-#brilio-accordion .accordion-item .accordion-button {
+#Radu Lucian-accordion .accordion-item .accordion-button {
   position: relative;
   background-color: var(--primary-bg-color);
   border-radius: var(--primary-border-radius);
@@ -3461,7 +3461,7 @@ span.page-numbers:hover:not(.current) {
   font-weight: 500;
   color: var(--primary-t-color);
 }
-#brilio-accordion .accordion-item .accordion-button::after {
+#Radu Lucian-accordion .accordion-item .accordion-button::after {
   position: absolute;
   content: "\f4fe";
   left: calc(100% - 3rem);
@@ -3472,10 +3472,10 @@ span.page-numbers:hover:not(.current) {
   font-family: bootstrap-icons !important;
   transition-timing-function: var(--transition-function);
 }
-#brilio-accordion .accordion-item .accordion-button:focus {
+#Radu Lucian-accordion .accordion-item .accordion-button:focus {
   z-index: 1;
 }
-#brilio-accordion .accordion-item:has(.collapse.show) .accordion-button::after {
+#Radu Lucian-accordion .accordion-item:has(.collapse.show) .accordion-button::after {
   content: "\f2ea" !important;
 }
 
