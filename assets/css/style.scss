@@ -4451,6 +4451,12 @@ span.page-numbers {
 	}
 
 	/* #endregion Helper Class */
+	.services_wrapper{
+		.services_wrapper{
+			display: flex;
+			flex-direction: column;
+		  }
+	}
 }
 
 @media(max-width: 767px) {

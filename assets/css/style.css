@@ -1776,6 +1776,20 @@ header .navbar-expand .dropdown:hover > .dropdown-menu {
   padding: 2.5rem;
   border-radius: 1.5rem;
 }
+
+@media (min-width: 992px) {
+  .services_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .services_wrapper_button{
+    margin-bottom: 1rem;
+    max-height: 4rem;
+  }
+}
+
 .services .item .service-content .service-icon {
   margin: 2.5rem 0;
 }
