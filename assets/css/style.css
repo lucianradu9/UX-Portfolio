@@ -1817,6 +1817,10 @@ header .navbar-expand .dropdown:hover > .dropdown-menu {
 .services.photography .awards .list-group-item:hover span:not(.icon) {
   color: inherit;
 }
+.spc-4r{
+  width: 100%;
+  height: 4rem;
+}
 
 .skills .item .icon {
   font-size: 2rem;
