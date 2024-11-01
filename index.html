@@ -916,23 +916,6 @@
 	<!-- ***** All jQuery Plugins ***** -->
 
 	<!-- jQuery(necessary for all JavaScript plugins) -->
-	<script>
-		// Check if preloader has already been shown
-		if (!localStorage.getItem("preloaderShown")) {
-			// Display the preloader
-			document.getElementById("preloader").style.display = "block";
-	
-			// Set timeout to hide the preloader after it finishes (adjust time as needed)
-			setTimeout(() => {
-				document.getElementById("preloader").style.display = "none";
-				// Mark preloader as shown
-				localStorage.setItem("preloaderShown", "true");
-			}, 3000); // Change 3000ms to the duration of the preloader animation
-		} else {
-			// Hide the preloader immediately if it has been shown before
-			document.getElementById("preloader").style.display = "none";
-		}
-	</script>
 	<script src="assets/js/vendor/jquery.min.js"></script>
 
 	<!-- Bootstrap js -->
