@@ -647,6 +647,9 @@
             var Shuffle = window.Shuffle;
             var Filter  = new Shuffle(document.querySelector('.filter-items-'+count), {
                 itemSelector: '.filter-item-'+count,
+                initialSort: {
+                    by: (element) => element.getAttribute('data-order')
+                },
                 buffer: 1,
             })
     
