@@ -1790,6 +1790,27 @@ header .navbar-expand .dropdown:hover > .dropdown-menu {
   }
 }
 
+@media (min-width: 1200px) {
+  .service-wrapper .col-lg-4 {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .service-wrapper .col-lg-4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .service-wrapper .col-lg-4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+}
+
 .services .item .service-content .service-icon {
   margin: 2.5rem 0;
 }
