@@ -1615,6 +1615,19 @@ header .navbar-expand .dropdown:hover > .dropdown-menu {
   padding: 1.6rem 3.5rem;
   font-size: 1.2rem;
 }
+#btn-mobile {}
+#btn-outline-mobile{}
+@media (max-width: 767px) {
+  #btn-mobile{
+    padding: 1rem 2.75rem;
+  }
+  #btn-outline-mobile{
+    padding: 0.5rem 2rem;
+  }
+  .hero-section .hero-content .content .btn {
+    padding: 1rem 2.75rem;
+  }
+}
 .hero-section .hero-content .content .sub-title {
   max-width: 50%;
 }
@@ -3042,6 +3055,11 @@ header .navbar-expand .dropdown:hover > .dropdown-menu {
   color: #ffffff;
   background-color: var(--primary-t-color);
   border-color: var(--primary-t-color);
+}
+@media (max-width: 575px) {
+  .spacer24 {
+    margin-top: 1.5rem;
+  }
 }
 
 .comments .contact-form {
