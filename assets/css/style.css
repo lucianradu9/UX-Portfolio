@@ -3064,6 +3064,12 @@ header .navbar-expand .dropdown:hover > .dropdown-menu {
     margin-top: 1.5rem;
   }
 }
+@media (min-width: 992px) {
+  .spacer48 {
+    width: 100%;
+    height: 7rem;
+  }
+}
 
 .comments .contact-form {
   background-color: transparent;
