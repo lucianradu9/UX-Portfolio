@@ -2061,6 +2061,9 @@ header .navbar-expand .dropdown:hover > .dropdown-menu {
 .primary-bg .list-group-item {
   border-color: var(--secondary-l-color);
 }
+.secondary-p-color{
+  background-color: var(--secondary-t-color-2);
+}
 
 .bg-purple {
   background-color: #f8f4ff;
