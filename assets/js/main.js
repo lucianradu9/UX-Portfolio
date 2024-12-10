@@ -781,45 +781,62 @@
 /*----------------------------------------------
 16. Contact Form
 ----------------------------------------------*/
-(function ($) {
+// Firebase configuration (make sure this matches your Firebase project settings)
+const firebaseConfig = {
+    apiKey: "AIzaSyC8Rt8nonkiXtXT0WU1n4b_W_lNPVL_alQ",
+    authDomain: "contact-fb96b.firebaseapp.com",
+    databaseURL: "https://contact-fb96b-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "contact-fb96b",
+    storageBucket: "contact-fb96b.appspot.com",
+    messagingSenderId: "453248812656",
+    appId: "1:453248812656:web:56b9eaecf35ffe036b16b5",
+};
 
+(function ($) {
 	'use strict';
 
 	var form = $('#contact-form');
-
 	var formMessages = $('.form-message');
 
 	$(form).submit(function (e) {
+		e.preventDefault(); // Prevent default form submission behavior
 
-		e.preventDefault();
+		// Clear previous messages
+		$(formMessages).removeClass('error success');
+		$(formMessages).text('');
 
-		var formData = $(form).serialize();
+		// Retrieve form values
+		const formData = {
+			name: $('#name').val(),
+			email: $('#email').val(),
+			phone: $('#phone').val(),
+			companyName: $('#company-name').val(),
+			website: $('#website').val(),
+			message: $('#message').val(),
+		};
 
-		$.ajax({
-			type: 'POST',
-			url: $(form).attr('action'),
-			data: formData
-		})
-		.done(function (response) {
+		// Firebase form submission logic
+		import("https://www.gstatic.com/firebasejs/10.2.0/firebase-app.js")
+			.then(module => module.initializeApp(firebaseConfig)) // Use the defined Firebase configuration
+			.then(app =>
+				import("https://www.gstatic.com/firebasejs/10.2.0/firebase-database.js").then(module => {
+					const db = module.getDatabase(app);
+					const dbRef = module.ref(db, 'Contact/' + Date.now());
 
-			$(formMessages).removeClass('error');
-			$(formMessages).addClass('success');
-
-			$(formMessages).text(response);
-
-			$('#contact-form input,#contact-form textarea').val('');
-		})
-		.fail(function (data) {
-
-			$(formMessages).removeClass('success');
-			$(formMessages).addClass('error');
-
-			if (data.responseText !== '') {
-				$(formMessages).text(data.responseText);
-			} else {
-				$(formMessages).text('Oops! An error occured and your message could not be sent.');
-			}
-		});
+					return module.set(dbRef, formData); // Save form data in Firebase
+				})
+			)
+			.then(() => {
+				// Success handling
+				$(formMessages).addClass('success');
+				$(formMessages).text('Your message has been sent successfully!');
+				$(form)[0].reset(); // Reset the form fields
+			})
+			.catch(error => {
+				// Error handling
+				console.error('Firebase Error:', error);
+				$(formMessages).addClass('error');
+				$(formMessages).text('Oops! An error occurred, and your message could not be sent.');
+			});
 	});
-
 }(jQuery));
