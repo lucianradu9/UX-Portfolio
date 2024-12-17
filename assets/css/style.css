@@ -372,6 +372,9 @@ p:first-child {
 p:last-child {
   margin-bottom: 0;
 }
+#w400{
+  font-weight: 400;
+}
 
 h1 {
   margin-bottom: 1.5rem;
@@ -434,7 +437,8 @@ h5 {
 }
 
 h6 {
-  margin: 1.5rem 0;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
   font-size: var(--h6-size);
   font-weight: var(--h6-weight);
   line-height: 1.2;
@@ -1997,6 +2001,18 @@ header .navbar-expand .dropdown:hover > .dropdown-menu {
   -webkit-text-fill-color: transparent;
 }
 
+.services .item .item-count-last {
+  margin-right: 1rem;
+  font-size: var(--h2-size);
+  background-color: var(--black-color);
+  writing-mode: vertical-lr;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-text-stroke: 1px;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .stack-wrapper {
   grid-row-gap: 40px;
   flex-direction: column;
@@ -2063,6 +2079,10 @@ header .navbar-expand .dropdown:hover > .dropdown-menu {
 }
 .secondary-p-color{
   background-color: var(--secondary-t-color-2);
+}
+
+.black-color{
+  background-color: var(--black-color);
 }
 
 .bg-purple {
@@ -2236,7 +2256,7 @@ header .navbar-expand .dropdown:hover > .dropdown-menu {
 }
 
 .portfolio-meta {
-  font-weight: 500;
+  font-weight: 400;
 }
 .portfolio-meta .date {
   position: relative;
@@ -3059,6 +3079,42 @@ header .navbar-expand .dropdown:hover > .dropdown-menu {
   background-color: var(--primary-t-color);
   border-color: var(--primary-t-color);
 }
+
+.task{
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.task-title{
+  margin-bottom: 0.5rem;
+  font-size: var(--h6-size);
+  font-weight: 600;
+  line-height: 1.2;
+  font-family: var(--primary-font);
+  color: var(--primary-t-color);
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+
+@media (max-width: 991px) {
+  .task-title{
+    margin-top: 2rem;
+  }
+}
+
+.role-title{
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  font-size: var(--h6-size);
+  font-weight: 600;
+  line-height: 1.2;
+  font-family: var(--primary-font);
+  color: var(--primary-t-color);
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+
 @media (max-width: 575px) {
   .spacer24 {
     margin-top: 1.5rem;
@@ -3249,10 +3305,10 @@ footer .smooth-anchor:hover::after {
 .odd .awards .logo img {
   filter: invert(1);
 }
-.odd #Radu Lucian-accordion .accordion-item {
+.odd #RaduLucian-accordion .accordion-item {
   color: var(--secondary-p-color);
 }
-.odd #Radu Lucian-accordion .accordion-item .accordion-button {
+.odd #RaduLucian-accordion .accordion-item .accordion-button {
   background-color: var(--secondary-bg-color-2);
   color: var(--white-color);
 }
@@ -3524,18 +3580,18 @@ span.page-numbers:hover:not(.current) {
     transform: translateX(0);
   }
 }
-#Radu Lucian-accordion .accordion-item {
+#RaduLucian-accordion .accordion-item {
   background-color: transparent;
   border: none;
   color: var(--primary-p-color);
 }
-#Radu Lucian-accordion .accordion-item:not(:last-child) {
+#RaduLucian-accordion .accordion-item:not(:last-child) {
   margin-bottom: 0.5rem;
 }
-#Radu Lucian-accordion .accordion-item .accordion-header {
+#RaduLucian-accordion .accordion-item .accordion-header {
   margin: 0;
 }
-#Radu Lucian-accordion .accordion-item .accordion-button {
+#RaduLucian-accordion .accordion-item .accordion-button {
   position: relative;
   background-color: var(--primary-bg-color);
   border-radius: var(--primary-border-radius);
@@ -3544,7 +3600,7 @@ span.page-numbers:hover:not(.current) {
   font-weight: 500;
   color: var(--primary-t-color);
 }
-#Radu Lucian-accordion .accordion-item .accordion-button::after {
+#RaduLucian-accordion .accordion-item .accordion-button::after {
   position: absolute;
   content: "\f4fe";
   left: calc(100% - 3rem);
@@ -3555,10 +3611,10 @@ span.page-numbers:hover:not(.current) {
   font-family: bootstrap-icons !important;
   transition-timing-function: var(--transition-function);
 }
-#Radu Lucian-accordion .accordion-item .accordion-button:focus {
+#RaduLucian-accordion .accordion-item .accordion-button:focus {
   z-index: 1;
 }
-#Radu Lucian-accordion .accordion-item:has(.collapse.show) .accordion-button::after {
+#RaduLucian-accordion .accordion-item:has(.collapse.show) .accordion-button::after {
   content: "\f2ea" !important;
 }
 

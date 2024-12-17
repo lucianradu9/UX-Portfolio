@@ -2280,6 +2280,17 @@ header {
 			background-clip: text;
 			-webkit-text-fill-color: transparent;
 		}
+		.item-count-last{
+			margin-right: 1rem;
+			font-size: var(--h2-size);
+			background-color: var(--black-color);
+			writing-mode: vertical-lr;
+			-webkit-transform: rotate(180deg);
+			transform: rotate(180deg);
+			-webkit-text-stroke: 1px;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
 	}
 }
 
@@ -3888,7 +3899,7 @@ footer {
 		}
 	}
 
-	#Radu Lucian-accordion {
+	#RaduLucian-accordion {
 		.accordion-item {
 			color: var(--secondary-p-color);
 
@@ -4255,7 +4266,7 @@ span.page-numbers {
 	}
 }
 
-#Radu Lucian-accordion {
+#RaduLucian-accordion {
 	.accordion-item {
 		background-color: transparent;
 		border: none;
