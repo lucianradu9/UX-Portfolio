@@ -10,10 +10,10 @@ if (lastPasswordTime) {
     } else {
         // Save the current page URL before redirecting
         localStorage.setItem("returnURL", window.location.href);
-        window.location.href = "../../auth.html";
+        window.location.href = "../../auth";
     }
 } else {
     // Save the current page URL before redirecting
     localStorage.setItem("returnURL", window.location.href);
-    window.location.href = "../../auth.html";
+    window.location.href = "../../auth";
 }
