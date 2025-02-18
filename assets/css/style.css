@@ -639,6 +639,41 @@ aside {
 6. Helper Class
 ----------------------------------------------*/
 /* #region Helper Class */
+@media (max-width: 1199px) {
+  #magic-cursor {display: none;}
+  #magic-cursor #cursor {display: none;}
+}
+@media (min-width: 1200px) {
+  #magic-cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out 0.5s;
+  }
+  #magic-cursor #cursor {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    margin-left: -20px;
+    box-sizing: border-box;
+    border: 2px solid var(--secondary-p-color);
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+  }
+  #magic-cursor #cursor.hovered {
+    opacity: 0 !important;
+    transition: opacity 0.3s;
+  }
+}
 #magic-cursor {
   position: absolute;
   top: 0;
