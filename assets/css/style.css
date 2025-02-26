@@ -966,6 +966,54 @@ aside {
   }
 }
 
+.btn-outline-v2 {
+  display: inline-flex;
+  flex-direction: row;
+  font-size: 1.2rem;
+  line-height: 1.25rem;
+  padding: 1.2rem 2rem;
+  color: var(--primary-t-color);
+  border: 1px solid var(--primary-t-color);
+  background-color: transparent;
+  border-radius: 100px;
+  outline: 0 none;
+  cursor: pointer;
+  gap: 0.5rem;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.btn-outline-v2 .icon {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.btn-outline-v2::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: var(--primary-t-color);
+  transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.btn-outline-v2:hover {
+  color: var(--white-color);
+}
+
+.btn-outline-v2:hover::before {
+  width: 300%;
+  height: 300%;
+}
+
 /* #endregion Helper Class */
 /*----------------------------------------------
 7. Header
@@ -1611,6 +1659,9 @@ header .navbar-expand .dropdown:hover > .dropdown-menu {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.hero-section .hero-content .content .btn {
+  padding: 1.6rem 3.5rem;
+}
 @media (max-width: 575px) {
   .hero-section.marketer {
     background-size: 150vh;
@@ -1651,25 +1702,8 @@ header .navbar-expand .dropdown:hover > .dropdown-menu {
 .hero-section h1 span {
   color: var(--primary-t-color-2);
 }
-.hero-section .hero-content .content .btn {
-  padding: 1.6rem 3.5rem;
-  font-size: 1.2rem;
-}
 #btn-mobile {}
 #btn-outline-mobile{}
-@media (max-width: 767px) {
-  #btn-mobile{
-    padding: 1rem 2rem;
-    gap: 0.5rem;
-  }
-  #btn-outline-mobile{
-    padding: 0.5rem 2rem;
-    gap: 0.5rem;
-  }
-  .hero-section .hero-content .content .btn {
-    padding: 1rem 2.75rem;
-  }
-}
 .hero-section .hero-content .content .sub-title {
   max-width: 50%;
 }
@@ -1967,11 +2001,6 @@ header .navbar-expand .dropdown:hover > .dropdown-menu {
   font-weight: 600 !important;
   transition: all var(--transition-function) var(--transition-duration);
   opacity: 0.85;
-}
-@media (max-width: 575px) {
-  .filter-menu .input-item .btn {
-    padding: 0.8rem 1.25rem;
-  }
 }
 .filter-menu .input-item .btn:hover {
   opacity: 0.75;
@@ -3761,38 +3790,32 @@ span.page-numbers:hover:not(.current) {
   }
   /* #endregion Header */
 
-  .btn{
+  .btn,
+  .btn-outline {
+    padding: 1rem 2rem;
     font-size: 1rem;
     line-height: 1.25rem;
   }
 
   .hero-section .hero-content .content .btn {
-    padding: 1 1.25rem;
-    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+  
+  .btn .icon,
+  .btn-outline .icon {
+    font-size: 1.25rem;
     line-height: 1.25rem;
   }
 
-  .btn.magnetic-button {
-    font-family: var(--primary-font);
+  .btn-outline-v2{
     font-size: 1rem;
     line-height: 1.25rem;
-    padding: 1 1.25rem;
-    gap: 0.5rem;
-    width: auto;
-  }
-  .btn.magnetic-button .icon {
-    font-size: 1.25rem;
+    padding: 1rem 2rem;
   }
 
-  .btn.btn-outline {
-    font-size: 1rem;
-    line-height: 1.25rem;
-    padding: 10 1.25rem;
-    gap: 0.5rem;
-    width: auto;
-  }
-  .btn.btn-outline .icon {
+  .btn-outline-v2 .icon{
     font-size: 1.25rem;
+    line-height: 1.25rem;
   }
 }
 @media (max-width: 576px) {
@@ -3801,9 +3824,6 @@ span.page-numbers:hover:not(.current) {
   }
   .items .item.item-card {
     padding: 32px;
-  }
-  .contact-form .form-group .btn {
-    padding: 14px 22px;
   }
   .contact-form textarea {
     height: 150px;
