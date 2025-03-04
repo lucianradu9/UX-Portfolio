@@ -2638,7 +2638,7 @@ header .navbar-expand .dropdown:hover > .dropdown-menu {
   color: #f778ba;
 }
 
-@keyframes Radu Lucian-normal-text-marquee {
+@keyframes Radu-Lucian-normal-text-marquee {
   0% {
     transform: translateX(0) translateZ(0);
   }
@@ -2646,7 +2646,7 @@ header .navbar-expand .dropdown:hover > .dropdown-menu {
     transform: translateX(-100%) translateZ(0);
   }
 }
-@keyframes Radu Lucian-normal-text-marquee-copy {
+@keyframes Radu-Lucian-normal-text-marquee-copy {
   0% {
     transform: translateX(100%) translateZ(0);
   }
